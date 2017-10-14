@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet header-color.css?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="HeaderColorController">
+    <top>
+        <HBox fx:id="header" prefHeight="-1.0" prefWidth="-1.0">
+            <children>
+                <Label text="A really hard to read label" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" style="-fx-background-color: azure;">
+            <children>
+                <RadioButton mnemonicParsing="false" style="-fx-text-fill: forestgreen;" text="forestgreen">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="headerColorToggleGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" style="-fx-text-fill: firebrick;" text="firebrick" toggleGroup="$headerColorToggleGroup" />
+                <RadioButton mnemonicParsing="false" selected="true" style="-fx-text-fill: #4d4d4d;" text="#4d4d4d" toggleGroup="$headerColorToggleGroup" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </center>
+    <stylesheets>
+        <URL value="@header-color.css" />
+    </stylesheets>
+</BorderPane>
